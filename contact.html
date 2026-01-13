@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Contact | DJ Xoli S - Bookings & Inquiries</title>
+    <meta name="description" content="Get in touch with DJ Xoli S for bookings, collaborations, media inquiries, and general questions. Connect via email, social media, or booking form.">
+    <meta name="keywords" content="DJ Xoli contact, booking inquiry, event booking, collaboration request, South African DJ contact, Afro House DJ booking">
+    <meta name="author" content="DJ Xoli S">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #ff0080;
+            --secondary: #7928ca;
+            --accent: #ff4081;
+            --electric-blue: #00d4ff;
+            --neon-purple: #bf00ff;
+            --dark: #0a0a0a;
+            --light: #ffffff;
+            --gradient: linear-gradient(135deg, #ff0080 0%, #7928ca 50%, #4158d0 100%);
+            --gradient-alt: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --holographic: linear-gradient(45deg, #ff0080, #7928ca, #00d4ff, #bf00ff);
+            --glass-bg: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 0, 128, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(121, 40, 202, 0.05) 0%, transparent 20%);
+        }
+        
+        h1, h2, h3, .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+        }
+        
+        h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient);
+            border-radius: 10px;
+            border: 2px solid rgba(10, 10, 10, 0.8);
+        }
+        
+        /* Navbar with glassmorphism - Consistent with other pages */
+        .navbar {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            padding: 20px 0;
+            transition: all 0.4s ease;
+            border-bottom: 1px solid rgba(255, 0, 128, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        
+        .navbar.scrolled {
+            padding: 12px 0;
+            background: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 8px 40px rgba(255, 0, 128, 0.2);
+        }
+        
+        .navbar-brand {
+            font-size: 2rem;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            letter-spacing: 3px;
+            transition: all 0.3s;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .navbar-brand:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 20px rgba(255, 0, 128, 0.8));
+        }
+        
+        .nav-link {
+            color: var(--light) !important;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary) !important;
+            transform: translateY(-2px);
+            text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient);
+            transition: width 0.3s;
+            border-radius: 2px;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Contact Hero with holographic effect */
+        .contact-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), 
+                        url('https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--holographic);
+            background-size: 400% 400%;
+            opacity: 0.15;
+            z-index: 1;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: var(--holographic);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: float 3s ease-in-out infinite, holographicMove 5s ease infinite;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-weight: 900;
+            text-shadow: 0 0 40px rgba(255, 0, 128, 0.3);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes holographicMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #fff;
+            font-weight: 300;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease 0.3s backwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--holographic);
+            background-size: 400% 400%;
+            opacity: 0.03;
+            z-index: -1;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        .section-title {
+            font-size: 3.5rem;
+            margin-bottom: 60px;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 120px;
+            height: 5px;
+            background: var(--gradient);
+            border-radius: 3px;
+            animation: expandWidth 2s ease-in-out infinite;
+        }
+        
+        @keyframes expandWidth {
+            0%, 100% { width: 120px; }
+            50% { width: 180px; }
+        }
+        
+        /* Enhanced Contact Methods with glassmorphism */
+        .contact-methods {
+            margin-bottom: 80px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            height: 100%;
+            text-align: center;
+            border: 2px solid rgba(255, 0, 128, 0.2);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 0, 128, 0.2) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            transition: all 0.6s;
+        }
+        
+        .contact-card:hover::before {
+            width: 500px;
+            height: 500px;
+        }
+        
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s;
+        }
+        
+        .contact-card:hover::after {
+            left: 100%;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--electric-blue);
+            box-shadow: 0 25px 60px rgba(255, 0, 128, 0.4),
+                        0 0 40px rgba(0, 212, 255, 0.3);
+        }
+        
+        .contact-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.2rem;
+            color: white;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            animation: shimmer 2s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-card:hover .contact-icon {
+            transform: scale(1.15) rotate(360deg);
+            box-shadow: 0 15px 40px rgba(255, 0, 128, 0.5),
+                        0 0 30px rgba(0, 212, 255, 0.4);
+        }
+        
+        .contact-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+            transition: all 0.4s;
+        }
+        
+        .contact-card:hover h3 {
+            color: var(--electric-blue);
+            transform: translateY(-3px);
+        }
+        
+        .contact-card p {
+            color: #ccc;
+            margin-bottom: 15px;
+            transition: all 0.4s;
+        }
+        
+        .contact-card:hover p {
+            color: #fff;
+        }
+        
+        .contact-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            display: block;
+            transition: all 0.4s;
+            position: relative;
+            z-index: 1;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        .contact-link:hover {
+            transform: translateX(5px);
+        }
+        
+        .contact-desc {
+            color: #aaa;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            transition: all 0.4s;
+        }
+        
+        .contact-card:hover .contact-desc {
+            color: #ccc;
+        }
+        
+        /* Enhanced Contact Form with glassmorphism */
+        .contact-form-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-radius: 25px;
+            padding: 60px;
+            border: 2px solid rgba(255, 0, 128, 0.2);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-form-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--holographic);
+            background-size: 400% 400%;
+            opacity: 0.03;
+            z-index: -1;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .form-title {
+            font-size: 2.5rem;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        .form-subtitle {
+            color: #ccc;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-form .form-control {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 1rem;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            margin-bottom: 25px;
+        }
+        
+        .contact-form .form-control:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(255, 0, 128, 0.25),
+                        0 10px 30px rgba(255, 0, 128, 0.2);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .contact-form .form-control.is-valid {
+            border-color: rgba(76, 175, 80, 0.5);
+            background: rgba(76, 175, 80, 0.05);
+        }
+        
+        .contact-form .form-control.is-invalid {
+            border-color: rgba(244, 67, 54, 0.5);
+            background: rgba(244, 67, 54, 0.05);
+        }
+        
+        .contact-form label {
+            color: #ccc;
+            margin-bottom: 10px;
+            font-weight: 500;
+            display: block;
+            font-size: 1rem;
+        }
+        
+        .contact-form select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+            padding-right: 50px;
+        }
+        
+        /* Buttons with ripple effect - Consistent with other pages */
+        .cta-button {
+            display: inline-block;
+            padding: 16px 45px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 15px 40px rgba(255, 0, 128, 0.4);
+            border: none;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::after {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(255, 0, 128, 0.8),
+                        0 0 40px rgba(0, 212, 255, 0.5);
+            color: white;
+        }
+        
+        .form-btn {
+            padding: 16px 50px;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 15px 40px rgba(255, 0, 128, 0.4);
+            width: 100%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        .form-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .form-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .form-btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(255, 0, 128, 0.8),
+                        0 0 40px rgba(0, 212, 255, 0.5);
+        }
+        
+        .form-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            animation: none;
+        }
+        
+        .form-btn:disabled:hover {
+            transform: none;
+            box-shadow: 0 15px 40px rgba(255, 0, 128, 0.4);
+        }
+        
+        /* FAQ Section with enhanced glassmorphism */
+        .faq-section {
+            padding: 100px 0;
+            background: rgba(255, 255, 255, 0.03);
+            position: relative;
+        }
+        
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--holographic);
+            background-size: 400% 400%;
+            opacity: 0.03;
+            z-index: -1;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 0, 128, 0.2);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .faq-item:hover {
+            border-color: rgba(255, 0, 128, 0.4);
+            box-shadow: 0 15px 40px rgba(255, 0, 128, 0.3);
+        }
+        
+        .faq-item.active {
+            border-color: var(--electric-blue);
+            box-shadow: 0 20px 50px rgba(255, 0, 128, 0.4),
+                        0 0 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        .faq-question {
+            padding: 30px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            transition: all 0.4s;
+            background: rgba(255, 255, 255, 0.03);
+        }
+        
+        .faq-question:hover {
+            color: var(--electric-blue);
+        }
+        
+        .faq-item.active .faq-question {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            color: #ccc;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        .faq-answer.active {
+            padding: 0 30px 30px;
+            max-height: 1000px;
+        }
+        
+        .faq-toggle {
+            background: var(--holographic);
+            background-size: 200% 200%;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            flex-shrink: 0;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        .faq-item:hover .faq-toggle {
+            transform: scale(1.1);
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg) scale(1.1);
+            background: var(--gradient);
+        }
+        
+        /* Social Media Section with enhanced cards */
+        .social-section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .social-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--holographic);
+            background-size: 400% 400%;
+            opacity: 0.03;
+            z-index: -1;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .social-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: center;
+            border: 2px solid rgba(255, 0, 128, 0.2);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            transform: translate(-50%, -50%);
+            transition: all 0.6s;
+        }
+        
+        .social-card:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            border-color: var(--electric-blue);
+            box-shadow: 0 25px 60px rgba(255, 0, 128, 0.4),
+                        0 0 40px rgba(0, 212, 255, 0.3);
+            color: white;
+        }
+        
+        .social-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .instagram-bg {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+        
+        .facebook-bg {
+            background: #1877F2;
+        }
+        
+        .twitter-bg {
+            background: #1DA1F2;
+        }
+        
+        .soundcloud-bg {
+            background: #FF3300;
+        }
+        
+        .spotify-bg {
+            background: #1DB954;
+        }
+        
+        .youtube-bg {
+            background: #FF0000;
+        }
+        
+        .social-card:hover .social-icon {
+            transform: scale(1.15) rotate(360deg);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .social-handle {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s;
+        }
+        
+        .social-card:hover .social-handle {
+            transform: translateY(-3px);
+        }
+        
+        .social-followers {
+            color: #ccc;
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s;
+        }
+        
+        .social-card:hover .social-followers {
+            color: #fff;
+        }
+        
+        .social-cta {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .social-card:hover .social-cta {
+            background: var(--holographic);
+            background-size: 200% 200%;
+            animation: shimmer 2s ease-in-out infinite;
+            transform: translateY(-3px);
+        }
+        
+        /* Enhanced Success Message */
+        .success-message {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(76, 175, 80, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 30px;
+            display: none;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .success-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(76, 175, 80, 0.05);
+            z-index: -1;
+        }
+        
+        .success-message.show {
+            display: block;
+            animation: fadeInUp 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        /* Footer - Consistent with other pages */
+        .footer {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 80px 0 40px;
+            border-top: 2px solid rgba(255, 0, 128, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        .footer h3 {
+            background: var(--holographic);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        .footer-social-icons a {
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 55px;
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-size: 1.3rem;
+            border: 2px solid rgba(255, 0, 128, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer-social-icons a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--gradient);
+            transform: translate(-50%, -50%);
+            transition: all 0.5s;
+            z-index: -1;
+        }
+        
+        .footer-social-icons a:hover::before {
+            width: 150%;
+            height: 150%;
+        }
+        
+        .footer-social-icons a:hover {
+            background: transparent;
+            transform: translateY(-10px) rotate(360deg) scale(1.15);
+            box-shadow: 0 15px 40px rgba(255, 0, 128, 0.6),
+                        0 0 30px rgba(0, 212, 255, 0.4);
+            border-color: var(--electric-blue);
+        }
+        
+        /* Music Note floating button - Consistent with other pages */
+        .music-note {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 70px;
+            height: 70px;
+            background: var(--holographic);
+            background-size: 200% 200%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            z-index: 1000;
+            box-shadow: 0 15px 50px rgba(255, 0, 128, 0.5);
+            cursor: pointer;
+            animation: musicBounce 2s infinite, shimmer 3s ease-in-out infinite;
+            text-decoration: none;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .music-note::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            border-top-color: var(--primary);
+            border-right-color: var(--electric-blue);
+            animation: rotateBorder 2s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .music-note:hover::before {
+            opacity: 1;
+        }
+        
+        .music-note:hover {
+            transform: scale(1.3) rotate(15deg);
+            box-shadow: 0 25px 70px rgba(255, 0, 128, 0.8),
+                        0 0 50px rgba(0, 212, 255, 0.6);
+            border-color: var(--electric-blue);
+        }
+        
+        @keyframes musicBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+        }
+        
+        @keyframes rotateBorder {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Floating particle elements - Consistent with other pages */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            box-shadow: 0 0 20px var(--primary);
+        }
+        
+        .floating-element:nth-child(2) {
+            background: var(--secondary);
+            box-shadow: 0 0 20px var(--secondary);
+        }
+        
+        .floating-element:nth-child(3) {
+            background: var(--electric-blue);
+            box-shadow: 0 0 20px var(--electric-blue);
+        }
+        
+        /* Quote Box - Matching other pages */
+        .quote-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 5px solid;
+            border-image: var(--gradient);
+            border-image-slice: 1;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #ddd;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-box::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 120px;
+            color: rgba(255, 0, 128, 0.1);
+            font-family: serif;
+            transition: all 0.4s;
+        }
+        
+        .quote-box:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(10px);
+        }
+        
+        .quote-box:hover::before {
+            color: rgba(255, 0, 128, 0.3);
+            transform: scale(1.2) rotate(-10deg);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 3rem;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .contact-form-container {
+                padding: 40px;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+                letter-spacing: 3px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .contact-form-container {
+                padding: 30px;
+            }
+            
+            .form-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-card {
+                padding: 30px 25px;
+            }
+            
+            .contact-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+            
+            .faq-section {
+                padding: 70px 0;
+            }
+            
+            .music-note {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .navbar-brand {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+                letter-spacing: 2px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-section {
+                padding: 70px 0;
+            }
+            
+            .contact-form-container {
+                padding: 25px;
+            }
+            
+            .contact-card {
+                padding: 25px 20px;
+            }
+            
+            .faq-question {
+                padding: 25px;
+                font-size: 1.1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 25px;
+            }
+            
+            .faq-answer.active {
+                padding: 0 25px 25px;
+            }
+            
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer {
+                padding: 60px 0 30px;
+            }
+            
+            .footer-social-icons a {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 1.1rem;
+                margin-right: 10px;
+            }
+            
+            .quote-box {
+                padding: 25px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .form-btn, .cta-button {
+                padding: 14px 30px;
+                font-size: 0.95rem;
+            }
+            
+            .contact-form .form-control {
+                padding: 14px 16px;
+            }
+        }
+        
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .contact-card:hover,
+            .social-card:hover,
+            .faq-item:hover,
+            .footer-social-icons a:hover,
+            .music-note:hover,
+            .cta-button:hover,
+            .form-btn:hover,
+            .quote-box:hover,
+            .faq-question:hover {
+                transform: none;
+            }
+            
+            .contact-form .form-control:focus {
+                transform: none;
+            }
+            
+            .nav-link:hover::after {
+                width: 0;
+            }
+            
+            .faq-toggle:hover {
+                transform: none;
+            }
+            
+            .social-card:hover .social-cta {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">DJ XOLI S</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gig-guide.html">Gig Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto hero-content">
+                    <h1 class="hero-title">GET IN TOUCH</h1>
+                    <p class="hero-subtitle">Let's create something amazing together. Reach out for bookings, collaborations, or just to say hello!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="floating-element" style="top: 20%; left: 10%;"></div>
+        <div class="floating-element" style="top: 60%; right: 15%; width: 30px; height: 30px;"></div>
+        <div class="floating-element" style="top: 80%; left: 20%; width: 25px; height: 25px;"></div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Methods</h2>
+            
+            <div class="contact-methods">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>For booking inquiries and professional collaborations</p>
+                            <a href="mailto:booking@djxolis.com" class="contact-link">booking@djxolis.com</a>
+                            <p class="contact-desc">Response within 48 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3>Booking Request</h3>
+                            <p>Complete the form below for event bookings</p>
+                            <a href="#booking-form" class="contact-link">Go to Booking Form</a>
+                            <p class="contact-desc">Detailed inquiries preferred</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>Management</h3>
+                            <p>For media, press, and management inquiries</p>
+                            <a href="mailto:management@djxolis.com" class="contact-link">management@djxolis.com</a>
+                            <p class="contact-desc">For official business only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="contact-form-container" id="booking-form">
+                        <div class="form-header">
+                            <h2 class="form-title">Booking Inquiry Form</h2>
+                            <p class="form-subtitle">Fill out the form below and we'll get back to you within 48 hours</p>
+                        </div>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="Your full name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="+27 123 456 7890">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="company">Company / Organization</label>
+                                    <input type="text" class="form-control" id="company" placeholder="Optional">
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="inquiryType">Type of Inquiry *</label>
+                                    <select class="form-control" id="inquiryType" required>
+                                        <option value="">Select inquiry type</option>
+                                        <option value="booking">Event Booking</option>
+                                        <option value="collaboration">Music Collaboration</option>
+                                        <option value="media">Media/Press</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="eventType">Event Type</label>
+                                    <select class="form-control" id="eventType">
+                                        <option value="">Select event type</option>
+                                        <option value="club">Club Night</option>
+                                        <option value="festival">Festival</option>
+                                        <option value="private">Private Event</option>
+                                        <option value="corporate">Corporate Event</option>
+                                        <option value="wedding">Wedding</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="eventDate">Event Date</label>
+                                    <input type="date" class="form-control" id="eventDate">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="budget">Budget Range</label>
+                                    <select class="form-control" id="budget">
+                                        <option value="">Select budget range</option>
+                                        <option value="under-5k">Under R5,000</option>
+                                        <option value="5k-10k">R5,000 - R10,000</option>
+                                        <option value="10k-20k">R10,000 - R20,000</option>
+                                        <option value="20k-50k">R20,000 - R50,000</option>
+                                        <option value="over-50k">Over R50,000</option>
+                                        <option value="discuss">To be discussed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="location">Event Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="City, Venue, Country">
+                            </div>
+                            
+                            <div>
+                                <label for="message">Your Message *</label>
+                                <textarea class="form-control" id="message" rows="6" placeholder="Please provide details about your event, expected audience, musical preferences, timeline, and any other relevant information..." required></textarea>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <button type="submit" class="form-btn" id="submitBtn">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div class="success-message" id="successMessage">
+                            <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 3rem; margin-bottom: 15px;"></i>
+                            <h3 style="color: #4CAF50;">Message Sent Successfully!</h3>
+                            <p>Thank you for your inquiry. We've received your message and will get back to you within 48 hours.</p>
+                            <p class="mt-3"><small>You will also receive a confirmation email shortly.</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title text-center">Frequently Asked Questions</h2>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How far in advance should I book DJ Xoli S for my event?
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            For best availability, we recommend booking at least 3-6 months in advance for weddings and corporate events, and 1-3 months for club bookings. Peak season (November-February) books up quickly, so earlier inquiries are encouraged.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is included in the booking fee?
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            The booking fee includes: DJ performance (2-6 hours depending on event), professional sound equipment (if needed), pre-event consultation, customized playlist based on your preferences, and travel within South Africa. Additional fees may apply for international events, special equipment requests, or extended performance times.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I request specific songs or genres?
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            Absolutely! We encourage clients to provide a list of must-play songs, preferred genres, and any songs to avoid. DJ Xoli S will work with you to create the perfect musical atmosphere for your event while maintaining her signature Afro House and electronic style.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What are the payment terms?
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            A 50% deposit is required to secure your date, with the remaining 50% due 7 days before the event. Payments can be made via bank transfer, credit card, or other agreed-upon methods. Corporate accounts may be eligible for different payment terms.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you travel for international events?
+                            <div class="faq-toggle">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, DJ Xoli S is available for international bookings. Additional costs for travel, accommodation, and work permits (if required) will be included in the quote. We have experience performing across Africa and Europe and can handle the logistics for international events.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title text-center">Connect on Social Media</h2>
+            <p class="text-center mb-5" style="font-size: 1.2rem; color: #ccc;">Follow for updates, new music, and behind-the-scenes content</p>
+            
+            <div class="social-grid">
+                <a href="https://www.instagram.com/xoli_s_dj/" target="_blank" class="social-card">
+                    <div class="social-icon instagram-bg">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="social-handle">@xoli_s_dj</div>
+                    <div class="social-followers">25K+ Followers</div>
+                    <div class="social-cta">Follow for Updates</div>
+                </a>
+                
+                <a href="#" target="_blank" class="social-card">
+                    <div class="social-icon facebook-bg">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="social-handle">DJ Xoli S</div>
+                    <div class="social-followers">15K+ Followers</div>
+                    <div class="social-cta">Like Page</div>
+                </a>
+                
+                <a href="#" target="_blank" class="social-card">
+                    <div class="social-icon twitter-bg">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="social-handle">@djxolis</div>
+                    <div class="social-followers">12K+ Followers</div>
+                    <div class="social-cta">Follow</div>
+                </a>
+                
+                <a href="#" target="_blank" class="social-card">
+                    <div class="social-icon soundcloud-bg">
+                        <i class="fab fa-soundcloud"></i>
+                    </div>
+                    <div class="social-handle">DJ Xoli S</div>
+                    <div class="social-followers">50K+ Streams</div>
+                    <div class="social-cta">Listen Now</div>
+                </a>
+                
+                <a href="#" target="_blank" class="social-card">
+                    <div class="social-icon spotify-bg">
+                        <i class="fab fa-spotify"></i>
+                    </div>
+                    <div class="social-handle">DJ Xoli S</div>
+                    <div class="social-followers">Monthly Listeners</div>
+                    <div class="social-cta">Follow Artist</div>
+                </a>
+                
+                <a href="#" target="_blank" class="social-card">
+                    <div class="social-icon youtube-bg">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="social-handle">DJ Xoli S</div>
+                    <div class="social-followers">Live Sets & Videos</div>
+                    <div class="social-cta">Subscribe</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h3 class="mb-4">DJ XOLI S</h3>
+                    <p>South African female DJ bringing fresh Afro House and Electronic vibes to the world.</p>
+                    <div class="quote-box mt-4" style="border-left: none; padding: 30px; margin: 0;">
+                        "Music connects us all. Let's create unforgettable experiences together."
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="mb-4" style="color: var(--primary);">Connect With Me</h4>
+                    <div class="footer-social-icons mb-4">
+                        <a href="https://www.instagram.com/xoli_s_dj/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+                        <a href="#" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+                        <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p style="color: #888;">&copy; 2023 DJ Xoli S. All rights reserved.</p>
+                    <p class="mt-3">
+                        <a href="index.html" class="cta-button" style="margin-top: 0; padding: 12px 30px; font-size: 0.85rem;">
+                            <i class="fas fa-arrow-left"></i> Back to Home
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Creative Floating Music Note Button -->
+    <a href="https://hearthis.at/xoli-sdj/escape-with-xoli-s-vol1/1mU/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" 
+       target="_blank" class="music-note" title="Listen to 'Escape with Xoli S Vol.1'">
+        <i class="fas fa-music"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            // Set minimum date for event date field to today
+            const today = new Date().toISOString().split('T')[0];
+            const eventDateInput = document.getElementById('eventDate');
+            if (eventDateInput) {
+                eventDateInput.min = today;
+            }
+            
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                
+                // Update active nav link based on scroll position
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id') || section.className.split(' ')[0];
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}` || 
+                        (current === '' && link.getAttribute('href') === 'contact.html')) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Enhanced FAQ toggle functionality with animations
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', function() {
+                    // Close all other FAQ items with animation
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherToggle = otherItem.querySelector('.faq-toggle');
+                            
+                            otherAnswer.style.transition = 'all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                            otherAnswer.classList.remove('active');
+                            otherItem.classList.remove('active');
+                            otherToggle.textContent = '+';
+                            otherToggle.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Toggle current item with enhanced animations
+                    const isActive = item.classList.contains('active');
+                    
+                    if (isActive) {
+                        // Close current item
+                        answer.style.transition = 'all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                        answer.classList.remove('active');
+                        item.classList.remove('active');
+                        toggle.textContent = '+';
+                        toggle.style.transform = 'rotate(0deg)';
+                    } else {
+                        // Open current item
+                        answer.style.transition = 'all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                        answer.classList.add('active');
+                        item.classList.add('active');
+                        toggle.textContent = '−';
+                        toggle.style.transform = 'rotate(45deg)';
+                        
+                        // Add subtle animation to the item
+                        item.style.transform = 'translateY(-5px)';
+                        setTimeout(() => {
+                            item.style.transform = 'translateY(0)';
+                        }, 300);
+                    }
+                });
+            });
+            
+            // Enhanced Contact form submission with animations
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Disable submit button and show loading state with animation
+                submitBtn.disabled = true;
+                const originalHtml = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.style.background = 'rgba(255, 255, 255, 0.1)';
+                submitBtn.style.animation = 'none';
+                
+                // Add pulsing animation to button
+                submitBtn.style.animation = 'pulse 1s infinite';
+                const pulseKeyframes = `
+                    @keyframes pulse {
+                        0% { box-shadow: 0 15px 40px rgba(255, 0, 128, 0.4); }
+                        50% { box-shadow: 0 15px 40px rgba(255, 0, 128, 0.8); }
+                        100% { box-shadow: 0 15px 40px rgba(255, 0, 128, 0.4); }
+                    }
+                `;
+                const styleSheet = document.createElement('style');
+                styleSheet.textContent = pulseKeyframes;
+                document.head.appendChild(styleSheet);
+                
+                // Get form data
+                const formData = {
+                    fullName: document.getElementById('fullName').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    company: document.getElementById('company').value,
+                    inquiryType: document.getElementById('inquiryType').value,
+                    eventType: document.getElementById('eventType').value,
+                    eventDate: document.getElementById('eventDate').value,
+                    budget: document.getElementById('budget').value,
+                    location: document.getElementById('location').value,
+                    message: document.getElementById('message').value,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Simulate API call with enhanced animation
+                setTimeout(() => {
+                    // Remove pulsing animation
+                    submitBtn.style.animation = 'none';
+                    document.head.removeChild(styleSheet);
+                    
+                    // Show success animation
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                    submitBtn.style.background = 'rgba(76, 175, 80, 0.2)';
+                    submitBtn.style.border = '2px solid rgba(76, 175, 80, 0.5)';
+                    submitBtn.style.color = '#4CAF50';
+                    
+                    // Animate form submission
+                    const formElements = contactForm.querySelectorAll('.form-control, .form-btn');
+                    formElements.forEach((element, index) => {
+                        setTimeout(() => {
+                            element.style.opacity = '0.5';
+                            element.style.transform = 'translateY(5px)';
+                        }, index * 50);
+                    });
+                    
+                    // Show success message with enhanced animation
+                    setTimeout(() => {
+                        successMessage.style.display = 'block';
+                        setTimeout(() => {
+                            successMessage.classList.add('show');
+                            
+                            // Animate success message elements
+                            const successElements = successMessage.querySelectorAll('*');
+                            successElements.forEach((el, i) => {
+                                el.style.opacity = '0';
+                                el.style.transform = 'translateY(10px)';
+                                
+                                setTimeout(() => {
+                                    el.style.transition = 'all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                                    el.style.opacity = '1';
+                                    el.style.transform = 'translateY(0)';
+                                }, i * 100);
+                            });
+                        }, 10);
+                        
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'center' 
+                        });
+                        
+                        // Reset form with animation
+                        setTimeout(() => {
+                            contactForm.reset();
+                            
+                            // Reset form elements appearance
+                            formElements.forEach((element, index) => {
+                                setTimeout(() => {
+                                    element.style.opacity = '1';
+                                    element.style.transform = 'translateY(0)';
+                                }, index * 50);
+                            });
+                            
+                            // Reset submit button after delay
+                            setTimeout(() => {
+                                submitBtn.innerHTML = originalHtml;
+                                submitBtn.style.background = '';
+                                submitBtn.style.border = '';
+                                submitBtn.style.color = '';
+                                submitBtn.disabled = false;
+                                submitBtn.style.animation = 'shimmer 2s ease-in-out infinite';
+                            }, 1500);
+                        }, 500);
+                        
+                        // Hide success message after delay
+                        setTimeout(() => {
+                            successMessage.classList.remove('show');
+                            setTimeout(() => {
+                                successMessage.style.display = 'none';
+                            }, 500);
+                        }, 8000);
+                        
+                    }, 500);
+                    
+                    // Log form data (in real implementation, this would be sent to server)
+                    console.log('Form submission:', formData);
+                    
+                }, 2000); // Simulate network delay
+            });
+            
+            // Enhanced form validation with visual feedback
+            const formInputs = contactForm.querySelectorAll('input, select, textarea');
+            formInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    if (
